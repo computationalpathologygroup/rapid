@@ -1,0 +1,22 @@
+packaging>22.0 # VITAL - will not build otherwise
+kornia
+plotly
+opencv-contrib-python
+dicomselect
+pyvista
+pyradiomics
+pytorch-lightning
+pymagsac
+kaleido
+torchstain
+ray>=1.0.1
+einops==0.3.0
+kornia==0.4.1
+loguru==0.5.3
+yacs>=0.1.8
+joblib>=1.0.1
+wandb
+ome-zarr
+zarr
+pandas==2.2.2
+numpy<2
