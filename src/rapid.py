@@ -1639,7 +1639,11 @@ class Rapid:
         # Save warped images for later inspection
         self.local_save_dir.joinpath("fullres_images").mkdir(parents=True, exist_ok=True)
         for name, im, mask in zip(self.image_ids, self.final_images_fullres, self.final_masks_fullres):
-            im.write_to_file(
+            
+            # Ensure correct output spacing in metadata
+            xyres = 1000 / self.full_resolution_spacing
+            im_save = im.copy(xres=xyres, yres=xyres)
+            im_save.write_to_file(
                 str(self.local_save_dir.joinpath("fullres_images", f"{name}.tif")),
                 tile=True,
                 compression="jpeg",
@@ -1647,7 +1651,9 @@ class Rapid:
                 pyramid=True,
                 Q=80
             )
-            mask.write_to_file(
+            
+            mask_save = mask.copy(xres=xyres, yres=xyres)
+            mask_save.write_to_file(
                 str(self.local_save_dir.joinpath("fullres_images", f"{name}_mask.tif")),
                 tile=True,
                 compression="lzw",
