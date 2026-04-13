@@ -1,0 +1,18 @@
+# Auto-detect text files and force LF line endings everywhere
+* text=auto eol=lf
+
+# Explicitly mark binary files to prevent corruption
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pkl binary
+*.pth binary
+*.pt binary
+*.h5 binary
+*.npy binary
+*.npz binary
+*.zip binary
+*.tar binary
+*.gz binary
