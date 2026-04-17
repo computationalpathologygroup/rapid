@@ -1,3 +1,6 @@
+## News 🚀
+The RAPID framework has now been published in [Nature Scientific Reports](https://www.nature.com/articles/s41598-026-46776-4)!
+
 <h1 align="center">RAPID - Reconstruct Any Pathology In 3 Dimensions</h2>
 <p align="center">
 </p>
